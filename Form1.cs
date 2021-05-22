@@ -31,7 +31,7 @@ namespace WindowsFormsApp8
                 SqlCommand komut= new SqlCommand(kayit, connect);
                 komut.Parameters.AddWithValue("@koyun_sayı",txtkoyun.txt);
 
-                komut.Parameters.AddWithValue("cins.txtcins".text);
+                komut.Parameters.AddWithValue("cins.txtcins", yukarıda ki gibi textfield adı.text yapman lazım yani cins adini hangi textfield dan alıyorsan onun adi);
                 komut.ExecuteNonQuery();
 
                 connect.Close();
@@ -39,6 +39,8 @@ namespace WindowsFormsApp8
                                {
                 }
                 
-catch (Exception.exe)
+catch (Exception e)
             {
+               MessageBox.Show(e.Message);
             }
+}
